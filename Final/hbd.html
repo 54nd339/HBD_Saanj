@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Birthday Gift</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="card.css">
+        <link rel="icon" href="../favicon.png" type="image/x-icon">
+        
+        <script>
+            const $ = (element) => document.getElementById(element);
+            const change = (element,index, transform, color) => {
+                $(element).style.transform = transform;
+                $(element).style.color = color;
+                setTimeout(function(){
+                    $(element).style.zIndex=index;
+                },500);
+            }
+
+            const paperPosition = (pY,zI) => {
+                $("secretPaper").style.top = pY;
+                $("secretPaper").style.zIndex = zI;
+            }
+
+            const takePaper = (top, transform, dsp) => {
+                $("secretPaper").style.top = top;
+                $("secretPaper").style.transform  = transform;
+                $("lastArrow").style.display = dsp;
+            }
+
+            const secretPage = () => {
+                if($("secretPaper").style.zIndex != "2"){
+                    takePaper("-100vh", "rotate(0deg)", "none");
+                    setTimeout(function(){
+                        paperPosition("30%", "2");
+                    },1500);
+                }
+                else{
+                    takePaper("-100%", "rotate(10deg)", "block");
+                    setTimeout(function(){
+                        paperPosition("30%", "-1");
+                    },1500);
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id ="notebook">
+            <div id = "cover">
+                <div class="back"></div>
+                <div class="front">
+                    <div class="cover-shape-large">
+                    <div class="shape-diamond"></div>
+                    <div class="shape-block"></div>
+                    </div>
+                    <div class="cover-shape-small">
+                    <div class="shape-diamond"></div>
+                    <div class="shape-block">
+                        <div class="cake">
+                        <div class="layer layer-bottom"></div>
+                        <div class="layer layer-middle"></div>
+                        <div class="layer layer-top"></div>
+                        <div class="icing"></div>
+                        <div class="drip drip1"></div>
+                        <div class="drip drip2"></div>
+                        <div class="drip drip3"></div>
+                        <div class="candle">
+                            <div class="flame"></div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <i class="fa fa-arrow-circle-right" onclick ="change('cover',1, 'rotateY(-90deg)', 'transparent')" ></i>
+                <div id = "br"></div>
+            </div>
+            <div class = "page" id = "backCover">
+                <div id = "secretPaper" onclick = "secretPage()">
+                    <p id="head">Happy Birthday Saanj!</p>
+                    <p>It all started with a status reply.</p>
+                    <p>Hope your day goes great Mrs. Sanjeebani Nanda!</p>
+                </div>
+                <div id = "hideout"></div>
+                <i class="fa fa-arrow-circle-left" onclick = "change('cover',1, 'rotateY(0deg)', 'black')" id ="lastArrow"></i>
+				
+            </div>
+        </div>
+
+        <audio loop="loop" autoplay="autoplay">
+            <source src="song.mp3" id="song" />
+            <source src="song.mp3" id="audio" />
+              Your browser does not support the audio element.
+        </audio>
+        <script>
+            setTimeout(function(){
+               window.location.href = "https://www.youtube.com/watch?v=1gk8r7RKbh0";
+            }, 24000);
+          </script>
+    </body>
+</html>
