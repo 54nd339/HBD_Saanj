@@ -57,7 +57,7 @@ h2 {
         width: auto;
         height: 450px;
         max-height: 450px;
-}
+    }
 }
 
 @media only screen and (max-width: 800px){
@@ -65,7 +65,7 @@ h2 {
         width: auto;
         height: 350px;
         max-height: 350px;
-}
+    }
 }
 
 @media only screen and (max-width: 500px){
@@ -73,7 +73,7 @@ h2 {
         width: auto;
         height: 225px;
         max-height: 225px;
-}
+    }
 }
 
 

@@ -1,8 +1,7 @@
 body{
-    background-image:url(background.jpeg);
-    background-repeat: no-repeat;
-    
-    overflow: hidden;
+  background-image:url(background.jpeg);
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 .section{
   width: 100%;
@@ -11,20 +10,19 @@ body{
   position: absolute;
 }
 .q1, .q2, .main-section{
-
-display: none;
-vertical-align: middle;
-position: absolute;  
-margin-top: 25%;
-left: 25%;
--webkit-transform: translateY(-50%);  
--o-transform: translateY(-50%);  
-transform: translateY(-50%);  
-font-family: 'Indie Flower', cursive;
-color: white;
-font-size: 50px;
-font-weight: bold;
-overflow: hidden;
-overflow-x: hidden;
-overflow-y: hidden;
+  display: none;
+  vertical-align: middle;
+  position: absolute;  
+  margin-top: 25%;
+  left: 25%;
+  -webkit-transform: translateY(-50%);  
+  -o-transform: translateY(-50%);  
+  transform: translateY(-50%);  
+  font-family: 'Indie Flower', cursive;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
