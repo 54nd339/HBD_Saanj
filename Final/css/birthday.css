@@ -2,8 +2,7 @@ body{
     background-image:url(background.jpeg);
     background-repeat: no-repeat;
     
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 .section{
   width: 100%;
