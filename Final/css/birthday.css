@@ -1,11 +1,9 @@
 body{
-  
-    z-index: 1;
     background-image:url(background.jpeg);
-    background-size: 100%;
     background-repeat: no-repeat;
     
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 .section{
   width: 100%;
